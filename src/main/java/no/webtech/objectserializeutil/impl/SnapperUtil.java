@@ -68,7 +68,7 @@ public class SnapperUtil {
             oos.close();
 
             sb.append("-----BEGIN SERIALIZED "
-                    + toBeSerialized.getClass().getCanonicalName() + " "
+                    + toBeSerialized.getClass().getSimpleName() + " "
                     + "-----\r\n");
             char[] ca2 = Base64Encoder.encodeAsCharArray(baos.toByteArray());
             for (int start = 0; start < ca2.length; start += 60) {
